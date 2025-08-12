@@ -7,7 +7,7 @@ import { useCallback, useRef, useState } from 'react';
 import Tab from './Tab/Tab';
 import { sliders } from './slides';
 import styles from './WithUsSection.module.scss';
-import { ArrowIcon } from '../icons';
+import { ArrowIcon } from '@/components/icons';
 
 const WithUsSection = () => {
   const [{ id: sliderId, slides }, setSlider] = useState(sliders[0]);
