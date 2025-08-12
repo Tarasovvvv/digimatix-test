@@ -1,0 +1,70 @@
+{
+  "root": true, // Указывает, что это корневой конфиг для проекта, ESLint не будет искать конфиги выше в файловой структуре
+  "parser": "@typescript-eslint/parser", // Используем парсер TypeScript для анализа кода
+  "parserOptions": {
+    "ecmaVersion": 2023, // Устанавливаем поддержку синтаксиса ECMAScript 2023
+    "sourceType": "module", // Код написан в формате ES-модулей
+    "ecmaFeatures": {
+      "jsx": true // Включаем поддержку JSX
+    },
+    "project": "./tsconfig.json" // Указываем путь к tsconfig.json для TypeScript
+  },
+  "plugins": [
+    "@typescript-eslint", // Плагин для работы с TypeScript
+    "import" // Плагин для контроля правил импорта
+  ],
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "plugin:import/recommended", "plugin:import/typescript"],
+  "rules": {
+    // Общие правила ESLint
+    "no-unused-vars": "off", // Отключаем стандартное правило для неиспользуемых переменных
+    "@typescript-eslint/no-unused-vars": "warn", // Включаем правило для неиспользуемых переменных с предупреждением (лучше работает с TypeScript)
+    "@typescript-eslint/no-unused-expressions": "warn", // Предупреждает о неиспользуемых выражениях, которые не вызывают никаких действий, таких как логические операторы или тернарные выражения. Это помогает предотвратить потенциальные ошибки в коде и улучшает читаемость.
+
+    // Настройка импорта
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "object"], // Группировка импортов по категориям: встроенные модули, внешние, внутренние, иерархия директорий и т.д.
+        "newlines-between": "always" // Требуем всегда вставлять пустую строку между группами импортов
+      }
+    ], // Правило для упорядочивания импортов
+    "import/no-unresolved": "off", // Отключаем проверку на существование модулей. Это полезно в Next.js, где страницы и компоненты могут импортироваться особым образом
+    "import/no-anonymous-default-export": "warn", // Предупреждение при использовании анонимных экспортов по умолчанию (рекомендуется давать имя экспорту)
+    "import/no-duplicates": "error", // Запрещаем дублирование импортов
+
+    "import/no-named-as-default": "off", // Отключаем правило, которое запрещает именованные экспорты по умолчанию
+
+    // Настройки TypeScript
+    "@typescript-eslint/ban-ts-comment": [
+      "error",
+      {
+        "ts-nocheck": true, // Запрещаем использование @ts-nocheck
+        "ts-ignore": false, // Разрешаем использование @ts-ignore
+        "ts-expect-error": false // Разрешаем использование @ts-expect-error
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}, // Используем резолвер для корректной работы с TypeScript
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".scss"] // Указываем расширения файлов, которые ESLint должен обрабатывать
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts", "**/*.tsx"], // Применяем следующие правила только к файлам TypeScript и TSX
+      "rules": {
+        "@typescript-eslint/explicit-module-boundary-types": "off", // Отключаем требование явно указывать типы у функций на уровне модулей
+        "@typescript-eslint/no-explicit-any": "warn" // Предупреждение при использовании типа any, лучше использовать более точные типы
+      }
+    },
+    {
+      "files": ["**/*.scss"], // Применяем следующие правила только к SCSS-файлам
+      "rules": {
+        "import/no-unresolved": "off" // Отключаем правило проверки на неразрешённые модули для SCSS, так как CSS и SCSS модули не всегда распознаются ESLint корректно
+      }
+    }
+  ]
+}
