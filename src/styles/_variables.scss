@@ -1,6 +1,17 @@
 :root {
   --bg-color: white;
+
   --text-color-white: white;
   --text-color-black: black;
   --text-color-violet: #5101a6;
+  --text-color-dark-violet: #200142;
+
+  --button-arrow-color: #5101a6;
+  --button-arrow-color-disabled: #b580ee;
+  --button-arrow-bg-color: #f6f6fa;
+  --button-arrow-bg-color-disabled: #f7f7f7;
+  --button-arrow-bg-color-hover: #e4d6f1;
+
+  --pagination-bullet: #e0e0e0;
+  --pagination-bullet-active: #5101a6;
 }

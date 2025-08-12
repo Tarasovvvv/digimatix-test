@@ -1,5 +1,6 @@
 .header {
   height: 740px;
+  margin-bottom: 168px;
 
   background-image: url('/images/header/Background.webp');
   background-repeat: no-repeat;
@@ -21,7 +22,7 @@
     padding-left: 80px;
     padding-right: 80px;
 
-    .mobileTicketButton {
+    .mobile-ticket-button {
       display: none;
 
       padding: 8px 12px;
@@ -44,20 +45,20 @@
     padding-right: 80px;
 
     h2 {
-      font-family: 'Montserrat';
+      font-family: Montserrat;
       font-size: 48px;
       font-weight: 700;
 
       text-transform: uppercase;
-      line-height: 56px;
+      line-height: calc(56 / 48);
     }
 
     p {
-      font-family: 'Roboto';
+      font-family: Roboto;
       font-size: 20px;
       font-weight: 400;
 
-      line-height: 28px;
+      line-height: 1.4;
     }
 
     h2,
@@ -83,6 +84,8 @@
   max-width: 1400px;
   width: 100%;
 
+  pointer-events: none;
+
   img {
     max-width: 727px;
   }
@@ -92,7 +95,7 @@
   max-height: 40px;
 }
 
-.buttonContainer {
+.button-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -100,14 +103,16 @@
 }
 
 @media (width <= 1843px) {
-  .moon {
-    img {
-      max-width: 640px;
-    }
+  .header {
+    margin-bottom: 120px;
   }
 }
 
 @media (width <= 1340px) {
+  .header {
+    margin-bottom: 80px;
+  }
+
   .moon {
     top: 170px;
     max-width: 1240px;
@@ -123,12 +128,12 @@
     &__body {
       h2 {
         font-size: 42px;
-        line-height: 48px;
+        line-height: calc(48 / 42);
       }
 
       p {
         font-size: 18px;
-        line-height: 24px;
+        line-height: calc(24 / 18);
       }
 
       h2,
@@ -159,12 +164,12 @@
 
       h2 {
         font-size: 38px;
-        line-height: 42px;
+        line-height: calc(42 / 38);
       }
 
       p {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 1.375;
       }
     }
   }
@@ -173,11 +178,11 @@
 @media (width <= 700px) {
   .header {
     &__top {
-      .ticketButton {
+      .ticket-button {
         display: none;
       }
 
-      .mobileTicketButton {
+      .mobile-ticket-button {
         display: block;
       }
     }

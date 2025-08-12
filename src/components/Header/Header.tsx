@@ -6,14 +6,14 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.moon}>
-        <img src='/images/header/Moon.webp' />
+        <img src='/images/header/Moon.webp' alt='Фотография луны' />
       </div>
       <div className={styles.header__top}>
-        <img src='/images/header/Logo.webp' className={styles.logo} />
-        <Button size='small' className={styles.ticketButton}>
+        <img src='/images/header/Logo.webp' className={styles.logo} alt='Логотип' />
+        <Button size='small' className={styles['ticket-button']}>
           <span>Закажите ваш билет</span>
         </Button>
-        <Button className={styles.mobileTicketButton}>
+        <Button className={styles['mobile-ticket-button']}>
           <TicketIcon />
         </Button>
       </div>
@@ -23,9 +23,9 @@ const Header = () => {
           Задача организации, в&nbsp;особенности&nbsp;же курс на&nbsp;социально-ориентированный национальный проект
           позволяет оценить значение модели развития.
         </p>
-        <div className={styles.buttonContainer}>
+        <div className={styles['button-container']}>
           <Button>
-            <span>Подробнее о нас</span>
+            <span>Подробнее о&nbsp;нас</span>
           </Button>
           <Button variant='secondary' rounded>
             <PlayIcon />
