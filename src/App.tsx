@@ -1,9 +1,12 @@
-import { Header } from "@/components";
+import { Header, WithUsSection } from '@/components';
 
 function App() {
   return (
     <>
       <Header />
+      <main>
+        <WithUsSection />
+      </main>
     </>
   );
 }
