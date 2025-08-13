@@ -1,6 +1,10 @@
 @use 'fonts' as *;
 @use 'variables' as *;
 
+#root {
+  position: relative;
+}
+
 *,
 *::after,
 *::before {

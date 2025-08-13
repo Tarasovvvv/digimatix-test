@@ -1,4 +1,4 @@
-import { Header, QuestionSection, WithUsSection } from '@/components';
+import { Header, WithUsSection, QuestionSection, Footer } from '@/components';
 
 function App() {
   return (
@@ -8,6 +8,7 @@ function App() {
         <WithUsSection />
         <QuestionSection />
       </main>
+      <Footer />
     </>
   );
 }
