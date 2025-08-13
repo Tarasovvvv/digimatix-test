@@ -1,0 +1,79 @@
+$color-violet: #5101a6;
+$color-white: #fff;
+
+.button {
+  border-radius: 6px;
+
+  font-family: Roboto;
+  text-transform: uppercase;
+
+  transition-property: color, background-color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+
+  &--primary {
+    color: $color-violet;
+    background-color: $color-white;
+  }
+
+  &--secondary {
+    background-color: $color-violet;
+    color: $color-white;
+  }
+
+  &--small {
+    font-size: 12px;
+    font-weight: 900;
+
+    line-height: 2;
+    letter-spacing: 1px;
+
+    padding: 8px 12px;
+  }
+
+  &--medium {
+    font-size: 12px;
+    font-weight: 900;
+
+    line-height: 2;
+    letter-spacing: 1px;
+
+    padding: 12px 16px;
+  }
+
+  &--large {
+    font-size: 16px;
+    font-weight: 700;
+
+    line-height: 1.5;
+    letter-spacing: 0;
+
+    padding: 24px 16px;
+  }
+
+  &--rounded {
+    border-radius: 100%;
+    max-height: fit-content;
+    align-self: center;
+
+    padding: 12px;
+  }
+}
+
+@media (hover: hover) {
+  .button {
+    &--primary {
+      &:hover {
+        color: $color-white;
+        background-color: $color-violet;
+      }
+    }
+
+    &--secondary {
+      &:hover {
+        color: $color-violet;
+        background-color: $color-white;
+      }
+    }
+  }
+}

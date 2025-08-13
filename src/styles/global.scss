@@ -1,0 +1,27 @@
+@use 'fonts' as *;
+@use 'variables' as *;
+
+#root {
+  position: relative;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
