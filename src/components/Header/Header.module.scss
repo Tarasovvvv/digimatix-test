@@ -4,7 +4,7 @@
 
   background-image: url('/images/header/Background.webp');
   background-repeat: no-repeat;
-  background-size: fill;
+  background-size: cover;
   background-position: top;
 
   &__top {
@@ -110,6 +110,8 @@
 
 @media (width <= 1340px) {
   .header {
+    height: fit-content;
+    padding-bottom: 80px;
     margin-bottom: 80px;
   }
 
@@ -126,13 +128,15 @@
 @media (width <= 1140px) {
   .header {
     &__body {
+      margin-top: 30px;
+
       h2 {
-        font-size: 42px;
+        font-size: 36px;
         line-height: calc(48 / 42);
       }
 
       p {
-        font-size: 18px;
+        font-size: 16px;
         line-height: calc(24 / 18);
       }
 
@@ -152,24 +156,21 @@
 
 @media (width <= 800px) {
   .header {
+    padding-bottom: 60px;
+
     &__top {
       padding-left: 60px;
       padding-right: 60px;
     }
 
     &__body {
-      margin-top: 80px;
+      margin-top: 20px;
       padding-left: 60px;
       padding-right: 60px;
 
       h2 {
-        font-size: 38px;
+        font-size: 32px;
         line-height: calc(42 / 38);
-      }
-
-      p {
-        font-size: 16px;
-        line-height: 1.375;
       }
     }
   }
@@ -186,11 +187,22 @@
         display: block;
       }
     }
+
+    &__body {
+      align-items: center;
+
+      h2,
+      p {
+        text-align: center;
+      }
+    }
   }
 }
 
 @media (width <= 500px) {
   .header {
+    padding-bottom: 40px;
+
     &__top {
       padding-left: 40px;
       padding-right: 40px;
@@ -205,6 +217,9 @@
 
 @media (width <= 376px) {
   .header {
+    height: fit-content;
+    padding-bottom: 20px;
+
     &__top {
       padding-left: 20px;
       padding-right: 20px;
