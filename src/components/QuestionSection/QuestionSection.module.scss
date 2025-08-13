@@ -1,0 +1,137 @@
+.question-section {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+
+  padding-top: 72px;
+  padding-bottom: 192px;
+
+  background-image: url('/images/questionSection/Background.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 32px;
+
+    line-height: 1.25;
+    letter-spacing: 0px;
+    text-align: center;
+
+    width: fit-content;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    color: var(--text-color-white);
+  }
+
+  p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 20px;
+
+    line-height: 1.4;
+    letter-spacing: 0px;
+    text-align: center;
+
+    max-width: 650px;
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    color: var(--text-color-white);
+  }
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1376px;
+  width: 100%;
+
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.email {
+  max-width: 256px;
+  width: 100%;
+  height: 72px;
+
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+
+  font-size: 16px;
+
+  outline: none;
+
+  &:focus {
+    border-color: #6200ee;
+
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 0.1s ease;
+    }
+  }
+
+  &::placeholder {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #999;
+  }
+}
+
+.submit-button {
+  max-width: 256px;
+  width: 100%;
+}
+
+@media (width <= 1300px) {
+  .form {
+    justify-content: center;
+    gap: 80px;
+
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (width <= 1000px) {
+  .question-section {
+    p {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+
+  .form {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (width <= 671px) {
+  .question-section {
+    h2 {
+      unicode-bidi: bidi-override;
+      font-variant: normal;
+    }
+  }
+
+  .form {
+    flex-direction: column;
+    gap: 30px;
+
+    > div,
+    > button {
+      max-width: 500px;
+    }
+  }
+}
