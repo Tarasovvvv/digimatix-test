@@ -1,9 +1,8 @@
 # Тестовое задание в компанию Digimatix
 
-## Задача
-
 Cверстать страницу, которую можно найти перейдя по ссылке
 https://www.figma.com/design/HRcSwE4iEeiALZQsco65Ea/Digimatix---frontendtest?node-id=0-1&p=f&t=vM45OGCLE6JFzhFk-0
+
 Требования по совместимости: EDGE, CHROME, FIREFOX последние версии.
 
 Основные комментарии по заданию:
